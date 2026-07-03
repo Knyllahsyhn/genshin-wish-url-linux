@@ -90,7 +90,7 @@ find_via_process() {
     cwd=$(readlink -f "/proc/$pid/cwd" 2>/dev/null || true)
     [ -n "$cwd" ] || continue
     local files
-    shopt -s nullglob
+    shopt -s nullglob # suppress "no matches" error
     files=( "$cwd"/*_Data/webCaches/*/Cache/Cache_Data/data_2 )
     shopt -u nullglob
     data=$(pick_newest "${files[@]}")

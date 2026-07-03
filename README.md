@@ -19,6 +19,9 @@ can import it into [paimon.moe](https://paimon.moe) or similar gacha trackers.
    one responds with `retcode == 0`.
 4. **Prints** the valid URL and copies it to the clipboard (if clipboard tools are available)
 
+Seems to work even when file's opened (aka. having the wish history opened), no file locks on it apparently.
+
+
 ## Requirements
 
 - `bash`, GNU `grep` (needs `-P`/PCRE support), `curl`, `jq`
